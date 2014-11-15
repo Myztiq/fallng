@@ -1,0 +1,11 @@
+{
+  "name": "downwithdrones",
+  "root": "./",
+  "routes":{
+    "*": "baked.html",
+    "/": "baked.html"
+  },
+  "clean_urls": true,
+  "error_page": "baked.html",
+  "exclude": ["lib/*","tools/*","index.html","README.md","server.py","weltmesiter.html"]
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Impact Game</title>
+  <style type="text/css">
+    html,body {
+      background-color: #333;
+      color: #fff;
+      font-family: helvetica, arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 12pt;
+    }
+
+    #canvas {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .hud {
+      text-align: right;
+    }
+
+    .hud .timer-display {
+      float: right;
+      margin-right: 20px;
+    }
+
+    .hud .scoring {
+      float: right;
+    }
+    .positioned{
+      position: absolute;
+      left: 15px;
+      right: 0;
+      top: 15px;
+      bottom: 0;
+      margin: auto;
+      width: 930px;
+      height: 476px;
+      z-index: 2;
+      text-align: center;
+      pointer-events: none;
+    }
+    .positioned.animated{
+      opacity: 0;
+      transition: all .5s;
+    }
+    .positioned.active{
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+
+  <script type="text/javascript" src="/game.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<div class="positioned hud animated">
+  <div class="scoring">
+    Score: <span class="score">0</span>
+  </div>
+  <div class="timer-display">Timer: <span class="timer"></span></div>
+</div>
+<canvas id="canvas"></canvas>
+<div class="intro positioned animated">
+  <h1>Down with the Drones</h1>
+  <br/>
+  Get your drones to their portal. Correct counts as points
+  for the number of seconds remaining, wrong counts negative.
+  <br/>
+  <h2>Go big or go home.</h2>
+  <br/>
+  <br/>
+  WASD to move
+  <br/>
+  K to swarm
+  <br/>
+  L to anti-swarm
+  <br/>
+  Click to get started.
+  <br/>
+  <br/>
+  You can also use a PS3/4 Dualshock Controller.
+  <br/>
+  Either joystick to move, X to swarm, Square to anit-swarm
+</div>
+<div class="level-end positioned animated">
+  LEVEL OVER.
+  <br/>
+  Click to go to next level.
+</div>
+<div class="game-end positioned animated">
+  Game Over
+  <br/>
+  Your Score: <span class="score">0</span>
+</div>
+</body>
+</html>
