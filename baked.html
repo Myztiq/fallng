@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Impact Game</title>
+  <title>Down With The Drones</title>
   <style type="text/css">
     html,body {
       background-color: #333;
@@ -10,6 +10,10 @@
       margin: 0;
       padding: 0;
       font-size: 12pt;
+    }
+    a {
+      color: #fff;
+
     }
 
     #canvas {
@@ -20,27 +24,25 @@
       bottom: 0;
       margin: auto;
     }
+
     .hud {
       text-align: right;
     }
 
     .hud .timer-display {
       float: right;
-      margin-right: 20px;
+      padding: 20px;
     }
 
-    .hud .scoring {
-      float: right;
-    }
     .positioned{
       position: absolute;
-      left: 15px;
+      left: 0px;
       right: 0;
-      top: 15px;
+      top: 0px;
       bottom: 0;
       margin: auto;
-      width: 930px;
-      height: 476px;
+      width: 800px;
+      height: 600px;
       z-index: 2;
       text-align: center;
       pointer-events: none;
@@ -59,10 +61,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-<div class="positioned hud animated">
-  <div class="scoring">
-    Score: <span class="score">0</span>
-  </div>
+<div class="positioned hud animated active">
   <div class="timer-display">Timer: <span class="timer"></span></div>
 </div>
 <canvas id="canvas"></canvas>
@@ -94,9 +93,16 @@
   Click to go to next level.
 </div>
 <div class="game-end positioned animated">
-  Game Over
+  <h2>Game Over</h2>
   <br/>
-  Your Score: <span class="score">0</span>
-</div>
+  Your Score: <span class="score">0</span><br/>
+
+  <h2>Credits</h2>
+  <p>
+    <a href="https://github.com/Myztiq">Ryan Kahn</a>,
+    <a href="https://github.com/postazure">Max Gordon</a>,
+    <a href="https://github.com/elyseko">Elyse Gordon</a>
+  </p>
+
 </body>
 </html>
