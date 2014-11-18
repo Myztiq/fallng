@@ -33,7 +33,7 @@
       text-align: right;
     }
 
-    .hud .timer-display {
+    .hud .timer-display .parachute-container {
       float: right;
       padding: 20px;
       color: white;
@@ -69,6 +69,9 @@
 <body>
   <div class="positioned hud animated active">
     <div class="timer-display">Timer: <span class="timer"></span></div>
+    <div class="parachute-container">
+       Parachutes: <span id="parachute-count"></span>
+    </div>
   </div>
   <canvas id="canvas"></canvas>
   <div class="game-end positioned animated">
